@@ -20,7 +20,8 @@ const page = {
 		comment: document.querySelector('.habbit__comment')
 	},
 	popup: {
-		index: document.getElementById('add-habbit-popup')
+		index: document.getElementById('add-habbit-popup'),
+		iconField: document.querySelector('.popup__form input[name = "icon"]')
 	}
 	
 }
@@ -155,6 +156,15 @@ function deleteDay(index) {
 	saveData();
 }
 
+
+// work with habbits
+
+function setIcon(context, icon) {
+	page.popup.iconField.value = icon;
+	const activeIcon = document.querySelector('.icon.icon_active');
+	activeIcon.classList.remove('icon_active');
+	context.classList.add('icon_active');
+}
 
 // init
 (() => {
