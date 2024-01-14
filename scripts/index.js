@@ -23,7 +23,6 @@ const page = {
 		index: document.getElementById('add-habbit-popup'),
 		iconField: document.querySelector('.popup__form input[name = "icon"]')
 	}
-	
 }
 
 // utils
@@ -77,7 +76,6 @@ function validateAndGetFormData(form, fields) {
 	return res;
 }
 
-
 // render
 
 function rerenderMenu(activeHabbit) {
@@ -127,7 +125,7 @@ function rerenderContent(activeHabbit) {
 			<div class="habbit__day">День ${Number(index) + 1}</div>
 			<div class="habbit__comment">${activeHabbit.days[index].comment}</div>
 			<button class="habbit__delete" onclick="deleteDay(${index})">
-				<img src="/images/delete.svg" alt="Удалить день ${index + 1}">
+				<img src="./images/delete.svg" alt="Удалить день ${index + 1}">
 			</button>
 		`;
 		page.content.daysContainer.appendChild(element);
